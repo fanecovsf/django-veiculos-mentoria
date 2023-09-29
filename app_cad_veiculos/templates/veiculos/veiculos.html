@@ -1,0 +1,26 @@
+{% extends 'veiculos/base.html' %}
+{% block conteudo %}
+    
+<div class="container">
+    <h1>Veiculos Cadastrados:</h1>
+
+
+    <table class="table table bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>modelo</th>
+            <th>cor</th>
+            <th>ano</th>
+        <tr>
+        {% for veiculo in veiculos %}
+        <tr>
+            <td>{{veiculo.id_veiculo}}</td>
+            <td>{{veiculo.modelo}}</td>
+            <td>{{veiculo.ano}}</td>
+            <td>{{veiculo.cor}}</td>
+        </tr>
+        {% endfor %}
+    <table>
+<div> 
+{% endblock %}
+
